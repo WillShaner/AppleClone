@@ -1,0 +1,309 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  grid-template
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("fonts/myriad-set-pro_bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("fonts/myriad-set-pro_semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("fonts/myriad-set-pro_medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("fonts/myriad-set-pro_text.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("fonts/myriad-set-pro_thin.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Myriad Set Pro";
+  src: url("fonts/myriad-set-pro_ultralight.ttf") format("truetype");
+  font-weight: 100;
+}
+/* Our CSS */
+body{
+  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 18px;
+}
+/*nav begins*/
+nav li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 10%;
+  max-width: 1000px;
+}
+/*-first we set the element to line up as inline blocks which means right next to eachother
+-vertical align lines up the images the verticallly the same distance from the top of the line
+-text align lines up of the text within the div to the center of their block instead of the left which is where it is at default
+-the width is set to 10% because we have 10 items and we want to coever 100% of the page
+-the max-width sets it to where th items in the li element do not go over the 1000px limit
+*/
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.nav-link{
+  background-origin: content-box;
+  opacity: 1;
+  height: 44px;
+}  
+nav{
+  height: 44px;
+  background: #333;
+}
+nav ul{
+  height: 44px;
+}
+/*
+-the max width element sets a max width that the element will go instead of stretching
+-the margin is making it to where there is no top margin but the margin between the images adjusts as the webpage is stretched
+-the padding creates space between the elements which are set to 0 top and bottom and 10px between the pics*/
+/*header{
+  padding: 10px 0;
+  background-color: #333;
+}
+/*
+-the padding gives makes the height of the black nav bar larger*/
+
+/*hero begins*/
+.product-info{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+/*the top margin moves the hero down from the top of the page 40 px*/
+
+.iphone-13-title{
+  font-size: 3em;
+}
+.iphone-13-sub{
+  font-size: 1.5em;
+}
+.hero{
+  color: #333;
+  text-align: center;
+  height: 55%;
+  margin: 0 auto;
+  padding: 1.5em;
+  line-height: 1.45;
+  margin-top: 10px;
+}
+
+#hero-img{
+  background: url(img/hero_iphone_13pro.jpg) center no-repeat;
+  height: 600px;
+  margin-top: -200px;
+}
+.product-link li {
+  font-size: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 0 6px;
+}
+.product-link a {
+  text-decoration: none;
+  color: #08c;
+  font-weight: 300;
+}
+
+.product-link a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+/*subhero begins*/
+.subhero {
+  height: 25%;
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+/*
+-the height was decided to be about 25% of the body*/ 
+.subhero-img {  
+  height: 200px;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+.column-3{
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  border: 2px solid white;
+}
+#subimg-1{
+  background: url(img/watch_large.jpg) center center no-repeat;
+}
+#subimg-2{
+  background: url(img/ipad_pro_large.jpg) center center no-repeat;
+}
+#subimg-3{
+  background: url(img/accessories_large.jpg) center center no-repeat;
+}
+#subimg-4{
+  background: url(img/macbook_large.jpg) center center no-repeat;
+  border-right: none;
+}
+#recall{
+  text-align: center;
+  padding: 20px 0;
+}
+/*footer begins*/
+footer{
+  padding-top: 20px;
+  height: 400px;
+  background-color: #f2f2f2;
+  list-style: none;
+  padding: 20px 22px;
+  text-decoration: #666;
+  font-size: 12px;
+
+}
+.footer-main{
+  line-height: 1.5;
+  max-width: 1000px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.footer-column{
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+.footer-column a{
+  text-decoration: none;
+  color: #666;
+
+}
+.footer-column a:hover{
+  text-decoration: underline;
+  color: #333;
+}
+.footer-bold{
+  color:#333;
+  font-weight: 500;
+}
+.footer-column ul{
+  padding-top: 20px;
+}
+.help-link{
+  padding-top: 20px;
+  color: rgb(127, 127, 127);
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #333;
+}
+.help-link a{
+  color:#08c;
+}
+.help-link a:hover{
+  color:#000;
+  text-decoration: underline;
+}
+
+#legal{
+  display: inline-block;
+  margin-right: 20px;
+}
+#legal-links{
+  display: inline-block;
+}
+#legal-links li{
+  display: inline-block;
+  vertical-align: top;
+  
+}
+#legal-links li:not(:last-child){
+  padding-right: 12px;
+  border-right: 1px solid #333;
+  margin-right: 10px;
+  vertical-align: top;
+}
+#legal-links a{
+  text-decoration: none;
+  color: #666;
+
+}
+#legal-links a:hover{
+  text-decoration: underline;
+  color: #333;
+}
+.locale {
+  float: right;
+}
+.locale a{
+  vertical-align: top;
+  text-decoration: none;
+  color: #666;
+}
+
+.locale a:hover{
+  text-decoration: underline;
+  color: #333;
+}
+#locale-logo{
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 2px;
+  vertical-align: top;
+}
+.footer-bottom{
+  margin-top: 30px;
+  display: inline;
+  vertical-align: top;
+}

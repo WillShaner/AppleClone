@@ -46,59 +46,64 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("fonts/myriad-set-pro_bold.ttf") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("fonts/myriad-set-pro_semibold.ttf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("fonts/myriad-set-pro_medium.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("fonts/myriad-set-pro_text.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("fonts/myriad-set-pro_thin.ttf") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Myriad Set Pro";
-  src: url("fonts/myriad-set-pro_ultralight.ttf") format("truetype");
-  font-weight: 100;
-}
+
 /* Our CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body{
-  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: 'Inter', sans-serif !important;
   font-size: 18px;
+  background-color:  rgb(245, 245, 247);
 }
-/*nav begins*/
-nav li {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  width: 10%;
-  max-width: 1000px;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
-/*-first we set the element to line up as inline blocks which means right next to eachother
--vertical align lines up the images the verticallly the same distance from the top of the line
--text align lines up of the text within the div to the center of their block instead of the left which is where it is at default
--the width is set to 10% because we have 10 items and we want to coever 100% of the page
--the max-width sets it to where th items in the li element do not go over the 1000px limit
-*/
 .container {
   margin: 0 auto;
-  padding: 0 10px;
 }
+.blue-link {
+  text-decoration: none;
+  color: #08c;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 0 6px;
+}
+
+
+.title-dark {
+  color: rgb(29, 29, 31);
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+}
+.title-light {
+  color: rgb(110, 110, 115);
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+}
+.dark-bg {
+  background-color: rgb(49, 49, 50);
+  transition: all 3s ease-in;
+}
+.blue-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+img {
+  border-radius: 20px;
+}
+
+/*--- nav ---*/
+.nav-bg {
+  background-color: rgb(49, 49, 50);
+}
+
+
 .nav-link{
   background-origin: content-box;
   opacity: 1;
@@ -106,204 +111,156 @@ nav li {
 }  
 nav{
   height: 44px;
-  background: #333;
+  max-width: 1100px;
 }
-nav ul{
-  height: 44px;
+nav a{
+  color: rgb(193, 193, 194);
+  padding: 5px;
+  font-size: 12px;
 }
-/*
--the max width element sets a max width that the element will go instead of stretching
--the margin is making it to where there is no top margin but the margin between the images adjusts as the webpage is stretched
--the padding creates space between the elements which are set to 0 top and bottom and 10px between the pics*/
-/*header{
-  padding: 10px 0;
-  background-color: #333;
-}
-/*
--the padding gives makes the height of the black nav bar larger*/
 
+.fa-apple{
+  color: rgb(214, 214, 214);
+}
+nav a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.sm-nav {
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .lg-nav {
+    display: none;
+    background-color: #fff;
+  }
+  .sm-nav {
+    display: flex;
+  }
+  .sm-nav a {
+    font-size: 16px;
+
+  }
+}
 /*hero begins*/
-.product-info{
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-/*the top margin moves the hero down from the top of the page 40 px*/
 
-.iphone-13-title{
-  font-size: 3em;
-}
-.iphone-13-sub{
-  font-size: 1.5em;
-}
+
 .hero{
-  color: #333;
-  text-align: center;
-  height: 55%;
-  margin: 0 auto;
+  color: rgb(29, 29, 31);
   padding: 1.5em;
   line-height: 1.45;
-  margin-top: 10px;
+  margin: 10px auto;
+  height: 20%;
+  max-width: 1100px;
 }
-
-#hero-img{
-  background: url(img/hero_iphone_13pro.jpg) center no-repeat;
-  height: 600px;
-  margin-top: -200px;
+.main-title{
+  font-size: 3em;
 }
-.product-link li {
-  font-size: 20px;
-  margin-top: 20px;
-  display: inline-block;
-  padding: 0 6px;
+.sub-title{
+  font-size: 1.5em;
 }
-.product-link a {
+.hero-image{
+  max-width: 800px;
+  border-radius: 20px;
+}
+.hero a {
+  border: 1px solid #08c;
+  border-radius: 15px;
+  padding: 8px;
+}
+.hero a:hover {
+  border: 1px solid #08c;
+  border-radius: 15px;
+  padding: 8px;
+  background-color: #08c;
+  color: rgb(245, 245, 247);
   text-decoration: none;
-  color: #08c;
-  font-weight: 300;
+  transition: all 250ms ease-in-out;
 }
 
-.product-link a:hover {
-  color: #000;
-  text-decoration: underline;
+
+/* --- Image scroll section --- */
+.image-holder {
+  display: flex;
+  flex-direction: row;
 }
-/*subhero begins*/
-.subhero {
-  height: 25%;
-  margin-top: 16px;
-  margin-bottom: 14px;
+.box {
+  padding: 5% 5%;
+  margin: 0 auto;
 }
-/*
--the height was decided to be about 25% of the body*/ 
-.subhero-img {  
-  height: 200px;
-  vertical-align: top;
-  box-sizing: border-box;
-  margin-bottom: 8px;
+.hero img:hover, .box img:hover {
+  transform: scale(1.008);
+  box-shadow: 0px 0px 5px 6px rgba(23,23,24,0.30);
+  transition: all 250ms ease-in-out;
 }
-.column-3{
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
-  border: 2px solid white;
+.box-text {
+  position: absolute;
+  color: white;
+  top: 20%;
+  left: 10%
 }
-#subimg-1{
-  background: url(img/watch_large.jpg) center center no-repeat;
+
+.box img{
+  width: 90vw;
+  height: 90vh;
+  border-radius: 20px;
+  object-fit: cover;
+  max-width: 1000px
 }
-#subimg-2{
-  background: url(img/ipad_pro_large.jpg) center center no-repeat;
+.image-wrapper {
+  overflow: hidden;
 }
-#subimg-3{
-  background: url(img/accessories_large.jpg) center center no-repeat;
-}
-#subimg-4{
-  background: url(img/macbook_large.jpg) center center no-repeat;
-  border-right: none;
-}
-#recall{
+.image-holder-title {
   text-align: center;
-  padding: 20px 0;
+  font-size: 5rem;
+  padding: 10px;
+}
+
+/* --- Sub-hero ---*/
+
+.sub-hero h1, .island-feature h1 {
+  max-width: 75%;
+  text-align: left;
+  padding: 1em;
+  margin: 0 auto;
+}
+.sub-hero img, .island-feature img{
+  height: auto;
+  width: 90vw;
+  object-fit: cover;
+  margin: auto;
+}
+@media screen and (min-width: 992px) {
+  .sub-hero h1, .island-feature h1 {
+    text-align: left;
+  }
 }
 /*footer begins*/
 footer{
   padding-top: 20px;
-  height: 400px;
   background-color: #f2f2f2;
   list-style: none;
-  padding: 20px 22px;
-  text-decoration: #666;
-  font-size: 12px;
-
-}
-.footer-main{
-  line-height: 1.5;
-  max-width: 1000px;
-  justify-content: center;
-  margin: 0 auto;
-}
-.footer-column{
-  width: 20%;
-  display: inline-block;
-  vertical-align: top;
-}
-.footer-column a{
-  text-decoration: none;
   color: #666;
-
+  font-size: 12px;
 }
-.footer-column a:hover{
-  text-decoration: underline;
-  color: #333;
+footer a {
+  color: rgb(110, 110, 115);
+}
+footer a:hover {
+  color: rgb(29, 29, 31);
+}
+.footer-info li {
+  padding: 5px 0;
+}
+.footer-info ul {
+  margin: 10px 30px;
+}
+footer div {
+  max-width: 1100px;
 }
 .footer-bold{
   color:#333;
   font-weight: 500;
 }
-.footer-column ul{
-  padding-top: 20px;
-}
-.help-link{
-  padding-top: 20px;
-  color: rgb(127, 127, 127);
-  padding-bottom: 5px;
-  margin-bottom: 6px;
-  border-bottom: 1px solid #333;
-}
-.help-link a{
-  color:#08c;
-}
-.help-link a:hover{
-  color:#000;
-  text-decoration: underline;
-}
 
-#legal{
-  display: inline-block;
-  margin-right: 20px;
-}
-#legal-links{
-  display: inline-block;
-}
-#legal-links li{
-  display: inline-block;
-  vertical-align: top;
-  
-}
-#legal-links li:not(:last-child){
-  padding-right: 12px;
-  border-right: 1px solid #333;
-  margin-right: 10px;
-  vertical-align: top;
-}
-#legal-links a{
-  text-decoration: none;
-  color: #666;
-
-}
-#legal-links a:hover{
-  text-decoration: underline;
-  color: #333;
-}
-.locale {
-  float: right;
-}
-.locale a{
-  vertical-align: top;
-  text-decoration: none;
-  color: #666;
-}
-
-.locale a:hover{
-  text-decoration: underline;
-  color: #333;
-}
-#locale-logo{
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 0 2px;
-  vertical-align: top;
-}
-.footer-bottom{
-  margin-top: 30px;
-  display: inline;
-  vertical-align: top;
-}

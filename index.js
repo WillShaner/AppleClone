@@ -18,4 +18,3 @@ gsap.to(boxes, {
   },
 });
 
-console.log(container.scrollWidth, document.body.offsetWidth);
